@@ -76,16 +76,16 @@ it('lets user2 buy a star and decreases its balance in ether', async() => {
 it('can add the star name and star symbol properly', async() => {
     const instance = await StarNotary.deployed();
     const user1 = accounts[1];
-    const starId = 6;
-    await instance.createStar('Mystar', starId, {from: user1});
+    const starId = 101;
+    await instance.createStar('vega', starId, {from: user1});
 
     const ContractName = await instance.name();
     const ContractSymbol = await instance.symbol();
     const starLookUp = await instance.lookUptokenIdToStarInfo(starId);
 
     assert.equal(ContractName,'StarToken');
-    assert.equal(ContractSymbol,'SRT');
-    assert.equal(starLookUp,'Mystar');
+    assert.equal(ContractSymbol,'STR');
+    assert.equal(starLookUp,'vega');
 });
 
 it('lets 2 users exchange stars', async() => {

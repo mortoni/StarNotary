@@ -9,7 +9,7 @@ contract StarNotary is ERC721 {
     }
 
     string public constant name = "StarToken";
-    string public constant symbol = "SRT";
+    string public constant symbol = "STR";
 
     mapping(uint256 => Star) public tokenIdToStarInfo;
     mapping(uint256 => uint256) public starsForSale;

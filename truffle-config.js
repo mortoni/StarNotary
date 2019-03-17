@@ -9,7 +9,7 @@ module.exports = {
     },
     rinkeby: {
       provider: function() {
-        return new HDWalletProvider("logic kid one myself claim parent mystery account cycle gas accident junk", "https://rinkeby.infura.io/v3/46b9fedcf59d4ab386f0089b9041bf12")
+        return new HDWalletProvider("<SEED WORDS>", "<INFURA ENDPOINT>")
       },
       network_id: '4',
       gas: 4500000,
