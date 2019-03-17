@@ -95,8 +95,8 @@ it('lets 2 users exchange stars', async() => {
     const starId = 7;
     const starId2 = 8;
 
-    await instance.createStar('TheMstar',starId, {from: Audrey});
-    await instance.createStar('TheGstar',starId2, {from: Alan});
+    await instance.createStar('star1',starId, {from: Audrey});
+    await instance.createStar('star2',starId2, {from: Alan});
     await instance.exchangeStars(starId,starId2);
     const star1 = await instance.ownerOf.call(starId);
     const star2 = await instance.ownerOf.call(starId2);
@@ -109,7 +109,7 @@ it('lets a user transfer a star', async() => {
     const Audrey = accounts[0];
     const Alan = accounts[1];
     const starId = 9;
-    await instance.createStar('TheMstar',starId, {from: Audrey});
+    await instance.createStar('star1',starId, {from: Audrey});
     await instance.transferStar(Alan,starId);
     const stars = await instance.ownerOf.call(starId);
     assert.equal(stars,Alan);

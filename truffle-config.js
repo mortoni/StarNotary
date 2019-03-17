@@ -9,7 +9,7 @@ module.exports = {
     },
     rinkeby: {
       provider: function() {
-        return new HDWalletProvider("<SEED WORDS>", "<INFURA ENDPOINT>")
+        return new HDWalletProvider("<METAMASK SEED WORDS>", "https://rinkeby.infura.io/v3/46b9fedcf59d4ab386f0089b9041bf12")
       },
       network_id: '4',
       gas: 4500000,
